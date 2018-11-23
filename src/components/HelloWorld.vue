@@ -7,20 +7,27 @@
       </p>
     </header>
 
+    <section class="input__row">
+      <div class="input__cell">
+        <label class="input__wrap">
+          <p class="username username--label">Username</p>
+          <input class="username username--input" type="text" value="" placeholder="">
+        </label>
+      </div>
+      <hr class="input__separator" />
+      <div class="input__cell">
+        <label class="input__wrap">
+          <p class="password password--label">Password</p>
+          <input class="password password--input" type="password" value="" placeholder="">
+        </label>
+      </div>
+    </section>
+
     <footer>
-      <p> Forgot password ? </p>
+      <p class="create">
+        <a href="#">Fargot password?</a>
+      </p>
     </footer>
-
-
-
-
-
-    <p class="username"> AMedomary </p>
-    <p> AMedomary </p>
-    <p> ***** </p>
-    <p> Create account </p>
-    <p> Forgot password ? </p>
-    
   </main>
 </template>
 
@@ -33,9 +40,15 @@ export default {
 <style scoped lang="scss">
   .wrapper {
     margin: auto;
+    width: 100%;
+    padding: 24px;
   }
 
   header {
+    margin-bottom: 100px;
+  }
+
+  footer {
     margin-bottom: 100px;
   }
 
@@ -45,13 +58,80 @@ export default {
     font-family: "polar_vertexregular";
   }
 
-  .username {
-    font-family: "anvylregular";
-  }
-
   .create {
     font-size: 25px;
     font-family: "Dancing Script", cursive;
     text-align: center;
+  }
+
+  .username {
+    font-family: "anvylregular";
+    font-size: 92px;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    &--label {
+      cursor: pointer;
+      opacity: .3;
+    }
+
+    &--input {
+      color: #ddd;
+    }
+  }
+
+  .password {
+    font-family: "anvylregular";
+    font-size: 92px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    &--label {
+      cursor: pointer;
+      opacity: .3;
+    }
+
+    &--input {
+      color: #ddd;
+    }
+  }
+
+  .input {
+    &__row {
+      display: flex;
+      flex-flow: row nowrap;
+      width: 100%;
+      justify-content: center;
+      align-items: stretch;
+      margin-bottom: 100px;
+    }
+
+    &__cell {
+      flex: 0 0 auto;
+      width: 50%;
+    }
+
+    &__separator {
+      display: inline-block;
+      flex: 0 0 auto;
+      width: 3px;
+      height: 124px;
+      margin: 0 15px;
+      background-color: var(--white);
+    }
+
+    &__wrap {
+      display: block;
+      width: 100%;
+      height: 100%;
+      position: relative;
+    }
   }
 </style>
