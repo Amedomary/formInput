@@ -10,20 +10,17 @@
     <section class='avatar__section'>
       <transition name="avatar">
         <div class="avatar__row" v-if="state.userIsFound">
-
-          <!-- НЕ ДЕЛАЙТЕ ТАК) -->
-
-          <img class='avatar__pic' src='@/assets/ava.jpg' alt='' v-if="account === 1">
+          <img class='avatar__pic' src='../assets/ava.jpg' alt='' v-if="account === 1">
           <p class='avatar__text' v-if="account === 1">
             Wellcome back, Mila
           </p>
 
-          <img class='avatar__pic' src='@/assets/ava1.jpg' alt='' v-if="account === 2">
+          <img class='avatar__pic' src='../assets/ava1.jpg' alt='' v-if="account === 2">
           <p class='avatar__text' v-if="account === 2">
             Wellcome back, Tom
           </p>
 
-          <img class='avatar__pic' src='@/assets/ava2.jpg' alt='' v-if="account === 3">
+          <img class='avatar__pic' src='../assets/ava2.jpg' alt='' v-if="account === 3">
           <p class='avatar__text' v-if="account === 3">
             Wellcome back, Gal
           </p>
