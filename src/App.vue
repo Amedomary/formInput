@@ -53,6 +53,11 @@ export default {
 
   input {
     width: 100%;
+    outline: none;
+
+    &[type="text"] {
+      text-overflow: ellipsis;
+    }
   }
 
   a:hover {
