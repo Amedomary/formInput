@@ -1,10 +1,9 @@
 <template>
   <main class='wrapper'>
+    <a class='logo' href="#" title="on Main">A8</a>
+
     <header>
       <p class='heading'>Login</p>
-      <!-- <p class='create'>
-        <a href='#'>Create account</a>
-      </p> -->
     </header>
 
     <section class='avatar__section'>
@@ -12,17 +11,17 @@
         <div class="avatar__row" v-if="state.userIsFound">
           <img class='avatar__pic' src='../assets/ava.jpg' alt='' v-if="account === 1">
           <p class='avatar__text' v-if="account === 1">
-            Wellcome back, Mila
+            Welcome back, Mila
           </p>
 
           <img class='avatar__pic' src='../assets/ava1.jpg' alt='' v-if="account === 2">
           <p class='avatar__text' v-if="account === 2">
-            Wellcome back, Tom
+            Welcome back, Tom
           </p>
 
           <img class='avatar__pic' src='../assets/ava2.jpg' alt='' v-if="account === 3">
           <p class='avatar__text' v-if="account === 3">
-            Wellcome back, Gal
+            Welcome back, Gal
           </p>
         </div>
       </transition>
@@ -71,10 +70,10 @@
           Next
         </a>
       </div>
-      <div class="action__cell action__cell--singin">
-        <transition name='singin'>
-          <a class="action__link action__link--singin" href="#" v-if="state.pwComplete">
-            Sing in
+      <div class="action__cell action__cell--signin">
+        <transition name='signin'>
+          <a class="action__link action__link--signin" href="#" v-if="state.pwComplete">
+            Sign in
           </a>
         </transition>
       </div>
@@ -192,7 +191,7 @@ export default {
 .wrapper {
   margin: auto;
   width: 100%;
-  padding: 24px;
+  padding: 36px 24px 12px;
 }
 
 header {
@@ -201,6 +200,15 @@ header {
 
 footer {
   margin-bottom: 100px;
+}
+
+.logo {
+  position: fixed;
+  top: 36px;
+  left: 36px;
+  text-align: center;
+  font-size: 40px;
+  font-family: "polar_vertexregular";
 }
 
 .heading {
@@ -252,7 +260,7 @@ footer {
 }
 
 .username {
-  font-family: "anvylregular";
+  font-family: "anvylregular", 'Rubik Mono One', sans-serif;
   font-size: 110px;
   text-align: right;
   position: absolute;
@@ -496,7 +504,7 @@ footer {
   }
 }
 
-.singin {
+.signin {
   &-enter-active {
     transition: 1s;
   }

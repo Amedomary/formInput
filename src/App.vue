@@ -1,5 +1,6 @@
 <template>
   <div id='app'>
+    <!-- Made by Amedomary -->
     <HelloWorld />
   </div>
 </template>
